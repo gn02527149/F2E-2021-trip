@@ -1,0 +1,135 @@
+.homepage-container.inner-container {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: #eeeeee;
+
+  @media screen and (max-width: 1180px) {
+    padding: 0 30px;
+  }
+}
+
+.hot-container {
+  margin: 100px 50px;
+  width: 100%;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1e1e1e;
+    &.hot{
+      flex-direction: column;
+      align-items: flex-start;
+      span {
+        color: #08A6BB;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 35px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #AEAEAE;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      font-size: 24px;
+    }
+
+    .more-text {
+      display: inline-flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ff725e;
+      cursor: pointer;
+
+      .icon {
+        margin-left: 10px;
+      }
+    }
+  }
+  .card-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0;
+
+    .card {
+      display: inline-block;
+      width: 296px;
+      width: 23%;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      filter: drop-shadow(7px 8px 22px rgba(111, 119, 137, 0.25));
+      background: #FFFFFF;
+      box-shadow: 2px 2px 4px rgba(114, 142, 171, 0.1), -6px -6px 20px rgba(255, 255, 255, 0.6), 4px 4px 20px rgba(111, 140, 176, 0.41);
+
+      @media screen and (max-width: 1024px) {
+        width: 48%;
+      }
+
+      @media screen and (max-width: 480px) {
+        width: 100%;
+      }
+
+      img {
+        width: 255px;
+        width: 100%;
+        height: 184px;
+        object-fit: cover;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .title {
+        display: block;
+        width: 100%;
+        margin: 10px 0 5px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+
+
+        @media screen and (max-width: 768px) {
+          font-size: 18px;
+        }
+      }
+
+      .city-info {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 16px;
+        color: #646464;
+
+        .icon {
+          margin-right: 5px;
+        }
+
+        span {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
