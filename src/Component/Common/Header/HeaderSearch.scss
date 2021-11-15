@@ -82,6 +82,12 @@
         box-shadow: 4px 4px 11px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
 
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          height: 40px;
+          padding: 0 10px;
+        }
+
         option {
           display: block;
           height: 50px;
@@ -101,6 +107,13 @@
         margin-right: 2%;
         box-shadow: 4px 4px 11px rgba(0, 0, 0, 0.25);
         border-radius: 8px;
+
+        @media screen and (max-width: 768px) {
+          font-size: 12px;
+          height: 40px;
+          padding: 0 10px;
+        }
+
         option {
           display: block;
           height: 50px;
@@ -118,6 +131,10 @@
         font-weight: 700;
         cursor: pointer;
 
+        @media screen and (max-width: 768px) {
+          height: 40px;
+        }
+
         .icon {
           margin-right: 10px;
         }
@@ -126,7 +143,7 @@
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      height: auto;
+      height: 300px;
 
       .left,
       .right {
