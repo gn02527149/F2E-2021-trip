@@ -22,9 +22,9 @@ const App = () => {
         {/* <ScrollToTop /> */}
         <TopNavigation />
         <Switch>
-          <Route exact path="/" component={Homepage} />
-          <Route path={`/:searchKind/search-result`} component={SearchResult} />
-          <Route path={`/:searchKind/view/:id`} component={ViewDetail} />
+          <Route exact path="/F2E-2021-trip/" component={Homepage} />
+          <Route path={`/F2E-2021-trip/:searchKind/search-result`} component={SearchResult} />
+          <Route path={`/F2E-2021-trip/:searchKind/view/:id`} component={ViewDetail} />
         </Switch>
         <Footer />
       </Router>
