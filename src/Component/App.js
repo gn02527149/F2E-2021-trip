@@ -12,13 +12,13 @@ import SearchResult from "../Router/SearchResult/index";
 import ViewDetail from "../Router/ViewDetail/index";
 // import ScrollToTop from "./ScrollToTop";
 
-export const basename = process.env.isProd ? "/F2E-2021_trip" : "/";
-console.log(basename);
+// export const basename = process.env.isProd ? "/F2E-2021_trip" : "/";
+// console.log(basename);
 
 const App = () => {
   return (
     <>
-      <Router basename={basename}>
+      <Router>
         {/* <ScrollToTop /> */}
         <TopNavigation />
         <Switch>

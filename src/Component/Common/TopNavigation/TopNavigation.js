@@ -18,7 +18,7 @@ const TopNavigation = () => {
         </div>
         <ul>
           <Link className="select" to="/">首頁</Link>
-          <Link className="not-allowed" to="/">
+          <Link to={`/:searchKind/search-result`}>
             景點導覽
           </Link>
           <Link className="not-allowed" to="/">
