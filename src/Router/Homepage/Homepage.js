@@ -33,7 +33,7 @@ const Homepage = () => {
           });
           console.log("nearby me", nearby);
           nearby.City = nearby.City || nearby.Address?.substr(0, 3);
-          setSliderData(nearby);
+          // setSliderData(nearby);
         },
         async () => {
           setSliderData(false);
@@ -50,9 +50,6 @@ const Homepage = () => {
       $top: 8,
     });
     setHotList(hotList);
-
-    console.log(hotList)
-
   }, []);
 
   return (
@@ -63,10 +60,10 @@ const Homepage = () => {
         {hotList.length > 0 && (
           <>
             <div className="container hot-container">
-              <p className="title hot">
+              <div className="title hot">
                 <span>熱門景點</span>
                 <p>台灣的各個美景，都美不勝收。<br/> 等你一同來發現這座寶島的奧妙！</p>
-              </p>
+              </div>
               <div className="card-container">
                 {hotList.map((data) => (
                   <div
@@ -92,14 +89,13 @@ const Homepage = () => {
               </div>
             </div>
             <div className="container class-container">
-              <p className="title class">
+              <div className="title class">
                 <span>活動類別</span>
                 <p>各種不同的活動內容<br/> 邀請您一銅來共襄盛舉！</p>
-              </p>
+              </div>
               <div className="card-container">
                   <div
                     className="card"
-                    // key={data.ID}
                     // onClick={() => history.push(`/scenic-spot/view/${data.ID}`)}
                   >
                     <div className="picture"><img src={yearPhoto} /></div>
@@ -107,7 +103,6 @@ const Homepage = () => {
                   </div>
                   <div
                     className="card"
-                    // key={data.ID}
                     // onClick={() => history.push(`/scenic-spot/view/${data.ID}`)}
                   >
                     <div className="picture"><img src={artPhoto} /></div>
@@ -115,7 +110,6 @@ const Homepage = () => {
                   </div>
                   <div
                     className="card"
-                    // key={data.ID}
                     // onClick={() => history.push(`/scenic-spot/view/${data.ID}`)}
                   >
                     <div className="picture"><img src={galaPhoto} /></div>
@@ -123,7 +117,6 @@ const Homepage = () => {
                   </div>
                   <div
                     className="card"
-                    // key={data.ID}
                     // onClick={() => history.push(`/scenic-spot/view/${data.ID}`)}
                   >
                     <div className="picture"><img src={otherPhoto} /></div>
