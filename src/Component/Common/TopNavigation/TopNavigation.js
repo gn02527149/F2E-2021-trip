@@ -17,8 +17,8 @@ const TopNavigation = () => {
           <p>Travel Taiwan</p>
         </div>
         <ul>
-          <Link className="select" to="/F2E-2021-trip/">首頁</Link>
-          <Link to={`/F2E-2021-trip/:searchKind/search-result`}>
+          <Link className="select" to="/">首頁</Link>
+          <Link to={`/:searchKind/search-result`}>
             景點導覽
           </Link>
           <Link className="not-allowed" to="/">

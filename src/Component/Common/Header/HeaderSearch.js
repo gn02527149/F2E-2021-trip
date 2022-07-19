@@ -25,7 +25,7 @@ const HeaderSearch = () => {
 
   const handleSearch = () => {
     history.push(
-      `/F2E-2021-trip/scenic-spot/search-result?${qs.stringify({
+      `/scenic-spot/search-result?${qs.stringify({
         searchKind,
         searchCity,
       })}`
