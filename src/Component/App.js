@@ -1,4 +1,5 @@
-import React, { useLayoutEffect } from "react";
+// import React, { useLayoutEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "../assets/normalize.css";
@@ -6,7 +7,7 @@ import './style.scss';
 
 import { TopNavigation } from "./Common/TopNavigation";
 import { Footer } from "./Common/Footer";
-import { requesScenicSpot } from "../controller/apiManager";
+// import { requesScenicSpot } from "../controller/apiManager";
 import Homepage from "../Router/Homepage/index";
 import SearchResult from "../Router/SearchResult/index";
 import ViewDetail from "../Router/ViewDetail/index";

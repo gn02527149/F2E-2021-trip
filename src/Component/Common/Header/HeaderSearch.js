@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import qs from "querystring";
 
@@ -6,22 +7,22 @@ import qs from "querystring";
 // import SearchIcon from "@mui/icons-material/Search";
 import searchIcon from "../../../assets/images/icons/bx_bx-search-alt.png";
 
-import requestAPI, { requesScenicSpot } from "../../../controller/apiManager";
+// import requestAPI, { requesScenicSpot } from "../../../controller/apiManager";
 
 import "./HeaderSearch.scss";
 
 const HeaderSearch = () => {
   const history = useHistory();
   const [searchKind, setSearchKind] = useState("探索景點");
-  const [searchCity, setSearchCity] = useState();
+  const [searchCity] = useState();
 
-  useEffect(async () => {
+  // useEffect(async () => {
     // const data = await requesScenicSpot("Taipei", {
     //   $top: 8,
     //   $filter: "contains(Address, '中正區')",
     // });
     // console.log(data);
-  }, []);
+  // }, []);
 
   const handleSearch = () => {
     history.push(
@@ -81,7 +82,9 @@ const HeaderSearch = () => {
             <option>澎 湖 縣</option>
             <option>連 江 縣</option>
           </select>
-          <div className="search-button" onClick={handleSearch}>
+          <div className="search-button"
+          //  onClick={handleSearch}
+           >
             <img src={searchIcon} alt="search"></img>
           </div>
         </div>

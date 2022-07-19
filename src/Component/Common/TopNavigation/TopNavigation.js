@@ -1,13 +1,14 @@
-import React, { useCallback, useState } from "react";
-import { useHistory } from 'react-router-dom';
+// import React, { useCallback, useState } from "react";
+import React from "react";
+// import { useHistory } from 'react-router-dom';
 
 
 import "./TopNavigation.scss";
 import { Link } from "react-router-dom";
 
 const TopNavigation = () => {
-  const history = useHistory();
-  const [isMenuVisible, setMenuVisible] = useState(false);
+  // const history = useHistory();
+  // const [isMenuVisible, setMenuVisible] = useState(false);
 
   return (
     <div id="top-navigation">
@@ -18,7 +19,7 @@ const TopNavigation = () => {
         </div>
         <ul>
           <Link className="select" to="/">首頁</Link>
-          <Link to={`/:searchKind/search-result`}>
+          <Link className="not-allowed" to={`/:searchKind/search-result`}>
             景點導覽
           </Link>
           <Link className="not-allowed" to="/">

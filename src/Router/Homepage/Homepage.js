@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
 import defaultCardPicture from "../../assets/images/view/unsplash_5Lw1U5BIumE.png";
 import LocationOnOutlinedIcon from "../../assets/images/icons/Vector.png";
@@ -11,12 +11,14 @@ import otherPhoto from "../../assets/images/other/unsplash_Wj1D-qiOseE.png";
 
 import { HeaderSearch } from "../../Component/Common/Header";
 import { Slider } from "../../Component/Common/Slider";
-import requestAPI, { requesScenicSpot } from "../../controller/apiManager";
+// import requestAPI, { requesScenicSpot } from "../../controller/apiManager";
+import { requesScenicSpot } from "../../controller/apiManager";
+
 
 import "./Homepage.scss";
 
 const Homepage = () => {
-  const history = useHistory();
+  // const history = useHistory();
   const [sliderData, setSliderData] = useState(false);
   const [hotList, setHotList] = useState([]);
 
@@ -74,7 +76,7 @@ const Homepage = () => {
                     key={data.ID}
                     // onClick={() => history.push(`/scenic-spot/view/${data.ID}`)}
                   >
-                    <div className="picture"><img src={data.Picture.PictureUrl1 || defaultCardPicture} /></div>
+                    <div className="picture"><img src={data.Picture.PictureUrl1 || defaultCardPicture} alt="API圖片遺失" /></div>
                     <p className="title">{data.Name}</p>
                     <div className="city-info">
                       <img className="icon" src={LocationOnOutlinedIcon}/>
